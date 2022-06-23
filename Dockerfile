@@ -4,5 +4,5 @@ COPY . .
 RUN npm install
 RUN npm run build  #/xyz/dist
 
-FROM nginx:1.23.0-alpine
+FROM :1.23.0-alpine
 COPY --from=0 /xyz/dist /usr/share/nginx/html
